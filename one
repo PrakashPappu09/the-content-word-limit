@@ -1,4 +1,5 @@
 /* 
+* Add the code to the child theme functions.php
 * Dynamic Content for the "the_content"
 * the_content with word limit 
 * Return Formatted content 
