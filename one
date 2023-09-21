@@ -1,0 +1,12 @@
+/* 
+* Dynamic Content for the "the_content"
+* the_content with word limit 
+* Return Formatted content 
+* Use: {{dc:getcontentlength}} 
+* Insert the dynamic content code into Text/Raw content/Headline element 
+*/
+add_filter( 'cs_dynamic_content_postcontentlength', function( $result, $field, $args) {
+  $content = get_the_content(get_the_ID(), 'postcontentlength');
+  $result = substr($content, 0, 500);
+  return $result;
+}, 10, 3 );
